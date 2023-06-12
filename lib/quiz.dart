@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_quiz/start_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -17,9 +18,11 @@ class _QuizState extends State<Quiz> {
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.deepPurple, Colors.deepPurpleAccent],
-            ),
+                colors: [Colors.deepPurple, Colors.deepPurpleAccent],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight),
           ),
+          child: const StartScreen(),
         ),
       ),
     );
