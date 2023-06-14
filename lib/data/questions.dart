@@ -52,4 +52,12 @@ const questions = [
       'By calling updateState()',
     ],
   ),
+  QuizQuestion(
+    'Is this fun?',
+    [
+      'Yes',
+      'No',
+      'Maybe',
+    ],
+  ),
 ];
