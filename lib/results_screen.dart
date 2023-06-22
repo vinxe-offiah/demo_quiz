@@ -8,9 +8,18 @@ class ResultsScreen extends StatelessWidget {
     return Center(
       child: Container(
         margin: const EdgeInsets.all(30),
-        child: const Column(
+        child: Column(
           mainAxisSize: MainAxisSize.min,
-          children: [],
+          children: [
+            const Text('You answered 3 out of 7 questions correctly..'),
+            const SizedBox(height: 15),
+            const Text('Where the answer results should be'),
+            const SizedBox(height: 20),
+            TextButton(
+              onPressed: () {},
+              child: const Text('Restart Quiz'),
+            ),
+          ],
         ),
       ),
     );
