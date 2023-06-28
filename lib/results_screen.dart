@@ -23,6 +23,7 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
+    var summaryData = getSelectedSummary();
     return Center(
       child: Container(
         margin: const EdgeInsets.all(30),
@@ -31,7 +32,7 @@ class ResultsScreen extends StatelessWidget {
           children: [
             const Text('You answered 3 out of 7 questions correctly..'),
             const SizedBox(height: 15),
-            QuestionsSummary(getSelectedSummary()),
+            QuestionsSummary(summaryData),
             const SizedBox(height: 20),
             TextButton(
               onPressed: () {},
