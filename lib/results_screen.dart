@@ -24,13 +24,20 @@ class ResultsScreen extends StatelessWidget {
   @override
   Widget build(context) {
     var summaryData = getSelectedSummary();
+    final numTotalQuestions = questions.length;
+    final numCorrectQuestions = summaryData.where(
+      (element) {
+        return element['correct-answer'] == element['chosen-answer'];
+      },
+    ).length;
     return Center(
       child: Container(
         margin: const EdgeInsets.all(30),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('You answered 3 out of 7 questions correctly..'),
+            Text(
+                'You answered $numCorrectQuestions of $numTotalQuestions questions correctly..'),
             const SizedBox(height: 15),
             QuestionsSummary(summaryData),
             const SizedBox(height: 20),
