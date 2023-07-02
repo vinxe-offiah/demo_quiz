@@ -1,6 +1,6 @@
+import 'package:demo_quiz/results/result_summary.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_quiz/data/questions.dart';
-import 'package:demo_quiz/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen(
@@ -34,14 +34,17 @@ class ResultsScreen extends StatelessWidget {
     ).length;
     return Center(
       child: Container(
-        margin: const EdgeInsets.all(30),
+        margin: const EdgeInsets.all(15),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-                'You answered $numCorrectQuestions of $numTotalQuestions questions correctly..'),
+              'You answered $numCorrectQuestions of $numTotalQuestions questions correctly..',
+              style: const TextStyle(fontSize: 22, color: Colors.amberAccent),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(height: 15),
-            QuestionsSummary(summaryData),
+            ResultSummary(summaryData),
             const SizedBox(height: 20),
             TextButton(
               onPressed: onRestart,
